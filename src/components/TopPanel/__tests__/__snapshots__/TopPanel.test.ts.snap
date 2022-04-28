@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div class="app-topPanel"><span class="topPanel-header">
+    Welcome to the Players List!
+  </span>
+  <div class="topPanel-counter"><span class="counter-text">
+      Online:
+    </span> <span class="counter-online">
+      10
+    </span> <span class="counter-separator">
+      /
+    </span> <span class="counter-total">
+      100
+    </span> <span class="counter-explanation">
+      players
+    </span></div>
+</div>
+`;

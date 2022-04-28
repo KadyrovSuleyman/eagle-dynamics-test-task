@@ -1,13 +1,21 @@
 <script lang="ts">
 import Vue from 'vue';
+import Vuex from 'vuex';
+import { adaptedState } from './state';
+
+Vue.use(Vuex);
 
 export default Vue.extend({
   name: 'TopPanel',
+
+  computed: {
+    ...adaptedState,
+  },
 });
 </script>
 
 <template>
-  <div id="app-topPanel">
+  <div class="app-topPanel">
     <span class="topPanel-header">
       Welcome to the Players List!
     </span>
@@ -16,13 +24,13 @@ export default Vue.extend({
         Online:
       </span>
       <span class="counter-online">
-        10
+        {{ online }}
       </span>
       <span class="counter-separator">
         /
       </span>
       <span class="counter-total">
-        100
+        {{ total }}
       </span>
       <span class="counter-explanation">
         players

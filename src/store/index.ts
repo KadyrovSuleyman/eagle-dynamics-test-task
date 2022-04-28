@@ -5,6 +5,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    online: 10,
+    total: 100,
   },
   getters: {
   },
