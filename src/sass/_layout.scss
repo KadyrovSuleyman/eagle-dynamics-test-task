@@ -1,0 +1,26 @@
+#app {
+  display: grid;
+
+  grid-template-areas:
+    'top  top'
+    'list info'
+    'list info'
+    'list info'
+    'list info'
+  ;
+
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.app-playerInfo {
+  grid-area: info;
+}
+
+.app-playersList {
+  grid-area: list;
+}
+
+.app-topPanel {
+  grid-area: top;
+}

@@ -1,0 +1,20 @@
+.playersList-playerItem {
+  display: grid;
+
+  grid-template-areas:
+    'a a  b b b b b b b b'
+    'a a  c c c c c c c c'
+  ;
+}
+
+.playerItem-avatar {
+  grid-area: a;
+}
+
+.playerItem-nickname {
+  grid-area: b;
+}
+
+.playerItem-status {
+  grid-area: c;
+}
