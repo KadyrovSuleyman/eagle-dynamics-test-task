@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div class="playersList-playerItem playersList-playerItem__status_offline">
+  <div class="playerItem-avatar">
+    avatar
+  </div>
+  <div class="playerItem-name">
+    name
+  </div>
+  <div class="playerItem-status">
+    offline
+  </div>
+</div>
+`;

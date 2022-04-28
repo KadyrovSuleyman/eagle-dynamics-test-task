@@ -3,25 +3,34 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'PlayerItem',
-  components: {
+  props: {
+    id: String,
+    status: String,
+    name: String,
+    avatar: String,
   },
 });
 </script>
 
 <template>
-  <div class="playersList-playerItem">
+  <div
+    :class="[
+      'playersList-playerItem',
+      `${status ? `playersList-playerItem__status_${status}` : ''}`,
+    ]"
+  >
     <div class="playerItem-avatar">
-      Avatar will be here
+      {{ avatar }}
     </div>
-    <div class="playerItem-nickname">
-      Nickname
+    <div class="playerItem-name">
+      {{ name }}
     </div>
     <div class="playerItem-status">
-      Online
+      {{ status }}
     </div>
   </div>
 </template>
 
 <style lang="scss">
-  @use 'styles' as *;
+@use 'styles' as *;
 </style>

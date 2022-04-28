@@ -1,7 +1,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { adaptedState } from './state';
+import adaptedState from './state';
 
 Vue.use(Vuex);
 

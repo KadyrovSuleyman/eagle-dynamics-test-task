@@ -1,8 +1,8 @@
+import { Player } from '@/types/player';
 import { mapState } from 'vuex';
 
 const adaptedState = mapState({
-  online: (state: any): number => state.online,
-  total: (state: any): number => state.total,
+  list: (state: any): Player[] => state.list,
 });
 
 export default adaptedState;

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div class="app-playerInfo">
+  <div class="playerInfo-avatar">
+    avatar
+  </div>
+  <div class="playerInfo-name">
+    name
+  </div>
+  <div class="playerInfo-status">
+    offline
+  </div>
+  <div class="playerInfo-description">
+    description
+  </div> <button class="playerInfo-kickButton">
+    Exclude
+  </button>
+</div>
+`;
+
+exports[`watchs props change 1`] = `
+<div class="app-playerInfo">
+  <div class="playerInfo-avatar">
+    avatar
+  </div>
+  <div class="playerInfo-name">
+    name
+  </div>
+  <div class="playerInfo-status">
+    offline
+  </div>
+  <div class="playerInfo-description">
+    description
+  </div> <button class="playerInfo-kickButton">
+    Exclude
+  </button>
+</div>
+`;
+
+exports[`watchs props change 2`] = `
+<div class="app-playerInfo">
+  <div class="playerInfo-avatar">
+    new avatar
+  </div>
+  <div class="playerInfo-name">
+    new name
+  </div>
+  <div class="playerInfo-status">
+    online
+  </div>
+  <div class="playerInfo-description">
+    new description
+  </div> <button class="playerInfo-kickButton">
+    Exclude
+  </button>
+</div>
+`;

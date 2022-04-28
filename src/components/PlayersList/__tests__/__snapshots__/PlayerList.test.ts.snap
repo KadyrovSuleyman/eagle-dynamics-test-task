@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders empty list 1`] = `
+<div class="app-playersListFallback">
+  There are no players yet
+</div>
+`;
+
+exports[`renders filled list 1`] = `
+<div class="app-playersList">
+  <div class="playersList-playerItem playersList-playerItem__status_offline">
+    <div class="playerItem-avatar">
+      dev/profiles/face1.jpg
+    </div>
+    <div class="playerItem-name">
+      🛦 Flying ℃omradE 🛦
+    </div>
+    <div class="playerItem-status">
+      offline
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face2.jpg
+    </div>
+    <div class="playerItem-name">
+      𝕯esperate 𝕭ℓⱭⅆe 𝕽unner
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face3.jpg
+    </div>
+    <div class="playerItem-name">
+      Fluffy
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face4.jpg
+    </div>
+    <div class="playerItem-name">
+      Appel82
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face2.jpg
+    </div>
+    <div class="playerItem-name">
+      No. 428
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face1.jpg
+    </div>
+    <div class="playerItem-name">
+      "Matic"
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face4.jpg
+    </div>
+    <div class="playerItem-name">
+      “Maverick”
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face4.jpg
+    </div>
+    <div class="playerItem-name">
+      braveheart
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face1.jpg
+    </div>
+    <div class="playerItem-name">
+      -=~0verthehor!zon~=-
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face3.jpg
+    </div>
+    <div class="playerItem-name">
+      Justdoit
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+</div>
+`;
+
+exports[`watchs outer store modify players list itself 1`] = `
+<div class="app-playersList">
+  <div class="playersList-playerItem playersList-playerItem__status_status">
+    <div class="playerItem-avatar">
+      avatar
+    </div>
+    <div class="playerItem-name">
+      name
+    </div>
+    <div class="playerItem-status">
+      status
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face2.jpg
+    </div>
+    <div class="playerItem-name">
+      𝕯esperate 𝕭ℓⱭⅆe 𝕽unner
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face3.jpg
+    </div>
+    <div class="playerItem-name">
+      Fluffy
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face4.jpg
+    </div>
+    <div class="playerItem-name">
+      Appel82
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face2.jpg
+    </div>
+    <div class="playerItem-name">
+      No. 428
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face1.jpg
+    </div>
+    <div class="playerItem-name">
+      "Matic"
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face4.jpg
+    </div>
+    <div class="playerItem-name">
+      “Maverick”
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face4.jpg
+    </div>
+    <div class="playerItem-name">
+      braveheart
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face1.jpg
+    </div>
+    <div class="playerItem-name">
+      -=~0verthehor!zon~=-
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face3.jpg
+    </div>
+    <div class="playerItem-name">
+      Justdoit
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+</div>
+`;
+
+exports[`watchs outer store modify players list itself 2`] = `
+<div class="app-playersList">
+  <div class="playersList-playerItem playersList-playerItem__status_status">
+    <div class="playerItem-avatar">
+      avatar
+    </div>
+    <div class="playerItem-name">
+      name
+    </div>
+    <div class="playerItem-status">
+      status
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face2.jpg
+    </div>
+    <div class="playerItem-name">
+      𝕯esperate 𝕭ℓⱭⅆe 𝕽unner
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face3.jpg
+    </div>
+    <div class="playerItem-name">
+      Fluffy
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face4.jpg
+    </div>
+    <div class="playerItem-name">
+      Appel82
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face2.jpg
+    </div>
+    <div class="playerItem-name">
+      No. 428
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face1.jpg
+    </div>
+    <div class="playerItem-name">
+      "Matic"
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face4.jpg
+    </div>
+    <div class="playerItem-name">
+      “Maverick”
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face4.jpg
+    </div>
+    <div class="playerItem-name">
+      braveheart
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+  <div class="playersList-playerItem playersList-playerItem__status_online">
+    <div class="playerItem-avatar">
+      dev/profiles/face1.jpg
+    </div>
+    <div class="playerItem-name">
+      -=~0verthehor!zon~=-
+    </div>
+    <div class="playerItem-status">
+      online
+    </div>
+  </div>
+</div>
+`;
+
+exports[`watchs outer store modify some players data 1`] = `
+<div class="playersList-playerItem playersList-playerItem__status_offline">
+  <div class="playerItem-avatar">
+    dev/profiles/face1.jpg
+  </div>
+  <div class="playerItem-name">
+    🛦 Flying ℃omradE 🛦
+  </div>
+  <div class="playerItem-status">
+    offline
+  </div>
+</div>
+`;
+
+exports[`watchs outer store modify some players data 2`] = `
+<div class="playersList-playerItem playersList-playerItem__status_status">
+  <div class="playerItem-avatar">
+    avatar
+  </div>
+  <div class="playerItem-name">
+    name
+  </div>
+  <div class="playerItem-status">
+    status
+  </div>
+</div>
+`;

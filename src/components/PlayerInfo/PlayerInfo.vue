@@ -1,26 +1,42 @@
 <script lang="ts">
 import Vue from 'vue';
+import adaptedState from './state';
 
 export default Vue.extend({
   name: 'PlayerItem',
-  components: {
+  props: {
+    id: String,
+    status: String,
+    name: String,
+    avatar: String,
+    description: String,
+  },
+  computed: {
+    ...adaptedState,
   },
 });
 </script>
 
 <template>
-  <div class="app-playerInfo">
+  <div v-if="!isPlayerSelected" class="app-playerInfoFallback">
+    Select the player
+  </div>
+
+  <div v-else class="app-playerInfo">
     <div class="playerInfo-avatar">
-      Avatar will be here
+      {{ avatar }}
     </div>
-    <div class="playerInfo-nickname">
-      Nickname
+    <div class="playerInfo-name">
+      {{ name }}
     </div>
     <div class="playerInfo-status">
-      Online
+      {{ status }}
     </div>
-    <div class="playerInfo-text">
-      Information about player
+    <div v-if="description" class="playerInfo-description">
+      {{ description }}
+    </div>
+    <div v-else class="playerInfo-emptyDescription">
+      There is no description for this player
     </div>
     <button class="playerInfo-kickButton">
       Exclude
