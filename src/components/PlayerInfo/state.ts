@@ -1,7 +1,12 @@
-import { mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 
-const adaptedState = mapState({
-  isPlayerSelected: (state: any): boolean => state.selected,
+const adaptedState = mapGetters({
+  isPlayerSelected: 'isAnyPlayerSelected',
+  player: 'selectedPlayer',
 });
 
-export default adaptedState;
+const state = {
+  ...adaptedState,
+};
+
+export default state;

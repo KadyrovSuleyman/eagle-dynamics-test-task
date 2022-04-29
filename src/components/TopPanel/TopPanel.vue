@@ -1,7 +1,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Vuex from 'vuex';
-import adaptedState from './state';
+import state from './state';
 
 Vue.use(Vuex);
 
@@ -9,7 +9,7 @@ export default Vue.extend({
   name: 'TopPanel',
 
   computed: {
-    ...adaptedState,
+    ...state,
   },
 });
 </script>
@@ -19,7 +19,12 @@ export default Vue.extend({
     <span class="topPanel-header">
       Welcome to the Players List!
     </span>
-    <div class="topPanel-counter">
+
+    <div v-if="!total" class="topPanel-counterFallback">
+      There is no registrated players
+    </div>
+
+    <div v-else class="topPanel-counter">
       <span class="counter-text">
         Online:
       </span>

@@ -1,18 +1,15 @@
 <script lang="ts">
 import Vue from 'vue';
-import adaptedState from './state';
+import state from './state';
+import actions from './handlers';
 
 export default Vue.extend({
   name: 'PlayerItem',
-  props: {
-    id: String,
-    status: String,
-    name: String,
-    avatar: String,
-    description: String,
-  },
   computed: {
-    ...adaptedState,
+    ...state,
+  },
+  methods: {
+    ...actions,
   },
 });
 </script>
@@ -24,21 +21,24 @@ export default Vue.extend({
 
   <div v-else class="app-playerInfo">
     <div class="playerInfo-avatar">
-      {{ avatar }}
+      {{ player.avatar }}
     </div>
     <div class="playerInfo-name">
-      {{ name }}
+      {{ player.name }}
     </div>
     <div class="playerInfo-status">
-      {{ status }}
+      {{ player.status }}
     </div>
-    <div v-if="description" class="playerInfo-description">
-      {{ description }}
+    <div v-if="player.description" class="playerInfo-description">
+      {{ player.description }}
     </div>
     <div v-else class="playerInfo-emptyDescription">
       There is no description for this player
     </div>
-    <button class="playerInfo-kickButton">
+    <button
+      @click="() => ban(player.id)"
+      class="playerInfo-kickButton"
+    >
       Exclude
     </button>
   </div>

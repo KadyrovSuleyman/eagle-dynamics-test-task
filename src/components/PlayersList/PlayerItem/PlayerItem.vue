@@ -1,4 +1,5 @@
 <script lang="ts">
+/* eslint-disable vuejs-accessibility/click-events-have-key-events */
 import Vue from 'vue';
 
 export default Vue.extend({
@@ -8,6 +9,7 @@ export default Vue.extend({
     status: String,
     name: String,
     avatar: String,
+    onclick: Function,
   },
 });
 </script>
@@ -18,6 +20,7 @@ export default Vue.extend({
       'playersList-playerItem',
       `${status ? `playersList-playerItem__status_${status}` : ''}`,
     ]"
+    @click="onclick"
   >
     <div class="playerItem-avatar">
       {{ avatar }}

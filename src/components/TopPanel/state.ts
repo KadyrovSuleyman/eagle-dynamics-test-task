@@ -1,8 +1,12 @@
-import { mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 
-const adaptedState = mapState({
-  online: (state: any): number => state.online,
-  total: (state: any): number => state.total,
+const adaptedState = mapGetters({
+  online: 'onlinePlayersNumber',
+  total: 'totalPlayersNumber',
 });
 
-export default adaptedState;
+const state = {
+  ...adaptedState,
+};
+
+export default state;

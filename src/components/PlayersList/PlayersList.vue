@@ -1,7 +1,8 @@
 <script lang="ts">
 import Vue from 'vue';
 import PlayerItem from './PlayerItem/PlayerItem.vue';
-import adaptedState from './state';
+import state from './state';
+import handlers from './handlers';
 
 export default Vue.extend({
   name: 'PlayersList',
@@ -9,7 +10,10 @@ export default Vue.extend({
     PlayerItem,
   },
   computed: {
-    ...adaptedState,
+    ...state,
+  },
+  methods: {
+    ...handlers,
   },
 });
 </script>
@@ -26,6 +30,7 @@ export default Vue.extend({
       :avatar="player.avatar"
       :name="player.name"
       :status="player.status"
+      :onclick="() => { select(player.id); }"
     />
 
   </div>

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div id="app">
+  <top-panel-stub></top-panel-stub>
+  <players-list-stub></players-list-stub>
+  <player-info-stub></player-info-stub>
+</div>
+`;
+
+exports[`watchs outer store 1`] = `
+<div id="app">
+  <top-panel-stub></top-panel-stub>
+  <players-list-stub></players-list-stub>
+  <player-info-stub></player-info-stub>
+</div>
+`;
+
+exports[`watchs outer store 2`] = `
+<div id="app">
+  <top-panel-stub></top-panel-stub>
+  <!---->
+  <!---->
+</div>
+`;

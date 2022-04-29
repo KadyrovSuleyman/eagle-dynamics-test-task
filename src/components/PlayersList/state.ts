@@ -2,7 +2,11 @@ import { Player } from '@/types/player';
 import { mapState } from 'vuex';
 
 const adaptedState = mapState({
-  list: (state: any): Player[] => state.playerList,
+  list: (state: any): Player[] => state.playersList,
 });
 
-export default adaptedState;
+const state = {
+  ...adaptedState,
+};
+
+export default state;

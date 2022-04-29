@@ -1,7 +1,7 @@
 import Vuex, { Store } from 'vuex';
 import { createLocalVue, mount, Wrapper } from '@vue/test-utils';
 import { Player } from '@/types/player';
-import mockedList from '../__mocks__/list';
+import mockedList from '../../../store/__mocks__/list';
 import PlayersListVue from '../PlayersList.vue';
 
 jest.mock('../state.ts');

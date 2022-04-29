@@ -5,7 +5,7 @@ const mockedList: Player[] = [
     name: '🛦 Flying ℃omradE 🛦',
     id: 'we0m',
     avatar: 'dev/profiles/face1.jpg',
-    description: '',
+    description: 'asdfasdf',
     status: 'offline',
   },
   {
