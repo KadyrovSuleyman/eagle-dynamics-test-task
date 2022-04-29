@@ -1,3 +1,4 @@
+import STATUS from '@/types/status';
 import { Player } from '@/types/player';
 import { MutationTree } from 'vuex';
 import { StateT } from './state';
@@ -12,17 +13,26 @@ const mutations: MutationTree<StateT> = {
   },
 
   toBanPlayer: (state: StateT, id: string) => {
-    // console.log(state.playersList);
-    // console.log(state.blackList);
-    // console.log(state.selectedPlayerIndex);
-    // console.log(id);
-
     state.playersList.splice(
       state.playersList.findIndex((player) => player.id === id),
       1,
     );
     state.blackList.push(id);
     state.selectedPlayerIndex = -1;
+  },
+
+  toConnectPlayer: (state: StateT, id: string) => {
+    const target = state.playersList.find((player) => player.id === id);
+    if (target) {
+      target.status = STATUS.ONLINE;
+    }
+  },
+
+  toDisconnectPlayer: (state: StateT, id: string) => {
+    const target = state.playersList.find((player) => player.id === id);
+    if (target) {
+      target.status = STATUS.OFFLINE;
+    }
   },
 };
 

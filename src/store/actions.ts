@@ -15,6 +15,23 @@ const actions: ActionTree<StateT, any> = {
   toBanPlayer: (store: ActionContext<StateT, any>, id: string) => {
     store.commit('toBanPlayer', id);
   },
+
+  playerConnected: (store: ActionContext<StateT, any>, player: Player) => {
+    if (store.state.blackList.includes(player.id)) {
+      console.warn('you are banned!');
+      return;
+    }
+
+    if (!store.state.playersList.includes(player)) {
+      store.commit('toAddPlayer', player);
+    }
+
+    store.commit('toConnectPlayer', player.id);
+  },
+
+  playerDisconnected: (store: ActionContext<StateT, any>, id: string) => {
+    store.commit('toDisconnectPlayer', id);
+  },
 };
 
 export default actions;
