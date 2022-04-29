@@ -9,7 +9,10 @@ export default Vue.extend({
     status: String,
     name: String,
     avatar: String,
-    onclick: Function,
+    onclick: {
+      type: Function,
+      default: () => ({}),
+    },
   },
 });
 </script>

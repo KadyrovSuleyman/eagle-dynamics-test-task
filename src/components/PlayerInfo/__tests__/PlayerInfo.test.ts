@@ -2,6 +2,7 @@ import { mount, Wrapper, createLocalVue } from '@vue/test-utils';
 import STATUS from '@/types/status';
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';
+import { Player } from '@/types/player';
 import PlayerInfoVue from '../PlayerInfo.vue';
 
 jest.mock('../state.ts');
@@ -22,11 +23,17 @@ const newData = {
   description: 'new description',
 };
 
-let store: Store<{ selected: boolean }>;
+let store: Store<{
+  selected: boolean,
+  player: Player,
+ }>;
 beforeEach(() => {
   store = new Vuex.Store({
     state: {
       selected: true,
+      player: {
+        ...data,
+      },
     },
     mutations: {
       changeSelectionState: () => { store.state.selected = !store.state.selected; },
@@ -48,22 +55,32 @@ it('renders', async () => {
 });
 
 it('watchs props change', async () => {
-  await wrapper.setProps(data);
+  store.state.player = {
+    ...data,
+  };
+  await wrapper.vm.$nextTick();
   expect(wrapper.element.outerHTML).toMatchSnapshot();
 
-  await wrapper.setProps(newData);
+  store.state.player = {
+    ...newData,
+  };
+  await wrapper.vm.$nextTick();
   expect(wrapper.element.outerHTML).toMatchSnapshot();
 });
 
 it('detect empty description', async () => {
-  await wrapper.setProps(data);
+  store.state.player = {
+    ...data,
+  };
+  await wrapper.vm.$nextTick();
   expect(wrapper.find('.playerInfo-description').text()).toBe(data.description);
   expect(wrapper.find('.playerInfo-emptyDescription').exists()).toBeFalsy();
 
-  await wrapper.setProps({
-    ...data,
+  store.state.player = {
+    ...newData,
     description: undefined,
-  });
+  };
+  await wrapper.vm.$nextTick();
   expect(wrapper.find('.playerInfo-description').exists()).toBeFalsy();
   expect(wrapper.find('.playerInfo-emptyDescription').text())
     .toBe('There is no description for this player');
