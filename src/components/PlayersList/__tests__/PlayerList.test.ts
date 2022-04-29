@@ -5,6 +5,11 @@ import mockedList from '../../../store/__mocks__/list';
 import PlayersListVue from '../PlayersList.vue';
 
 jest.mock('../state.ts');
+jest.mock('../handlers.ts');
+
+const actions = {
+  select: jest.fn(),
+};
 
 let store: Store<{ list: Player[] }>;
 beforeEach(() => {
@@ -22,6 +27,7 @@ beforeEach(() => {
         store.state.list[0].status = 'status';
       },
     },
+    actions,
   });
 });
 
@@ -62,4 +68,16 @@ describe('watchs outer store', () => {
     expect(wrapper.findAll('.playersList-playerItem').length).toBe(length - 1);
     expect(wrapper.element.outerHTML).toMatchSnapshot();
   });
+});
+
+it('triggers onclick func', async () => {
+  expect(actions.select).toBeCalledTimes(0);
+
+  await wrapper.findAll('.playersList-playerItem').at(0).trigger('click');
+  expect(actions.select).toBeCalledTimes(1);
+  expect(actions.select.mock.calls[0][1]).toBe(store.state.list[0].id);
+
+  await wrapper.findAll('.playersList-playerItem').at(1).trigger('click');
+  expect(actions.select).toBeCalledTimes(2);
+  expect(actions.select.mock.calls[1][1]).toBe(store.state.list[1].id);
 });

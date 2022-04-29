@@ -6,6 +6,7 @@ import { Player } from '@/types/player';
 import PlayerInfoVue from '../PlayerInfo.vue';
 
 jest.mock('../state.ts');
+jest.mock('../handlers.ts');
 
 const data = {
   id: 'we0m',
@@ -26,7 +27,12 @@ const newData = {
 let store: Store<{
   selected: boolean,
   player: Player,
- }>;
+}>;
+
+const actions = {
+  ban: jest.fn(),
+};
+
 beforeEach(() => {
   store = new Vuex.Store({
     state: {
@@ -38,6 +44,7 @@ beforeEach(() => {
     mutations: {
       changeSelectionState: () => { store.state.selected = !store.state.selected; },
     },
+    actions,
   });
 });
 
@@ -96,4 +103,12 @@ it('watchs outer store', async () => {
   expect(store.state.selected).toBeFalsy();
   expect(wrapper.find('.app-playerInfo').exists()).toBeFalsy();
   expect(wrapper.find('.app-playerInfoFallback').exists()).toBeTruthy();
+});
+
+it('exclude button click triggers his callback', async () => {
+  expect(actions.ban).toBeCalledTimes(0);
+
+  await wrapper.find('.playerInfo-kickButton').trigger('click');
+  expect(actions.ban).toBeCalledTimes(1);
+  expect(actions.ban.mock.calls[0][1]).toBe(data.id);
 });
