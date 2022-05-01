@@ -1,5 +1,4 @@
-export const __esModule = true;
-export const list = [
+exports.list = [
   {
     name: '🛦 Flying ℃omradE 🛦',
     id: 'we0m',

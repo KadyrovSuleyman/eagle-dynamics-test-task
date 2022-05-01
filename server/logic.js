@@ -1,44 +1,58 @@
-export const __esModule = true;
-// exports.wff = exports.wf = void 0;
-import { list } from './list.js';
+const ImportedList = require('./list');
 
 const CONNECTION_PERIOD = 2100;
 const DISCONNECTION_PERIOD = 3500;
 const DELAY_BEFORE_START_DISCONNECTIONS = 4000;
-const getRandomInt = function (max) { return Math.floor(Math.random() * max); };
-const wf = function (send) {
-  const offline = list.map((player) => player.id);
-  const online = [];
+
+function getRandomInt(max) { return Math.floor(Math.random() * max); }
+
+function setConnectPlayerInterval(online, offline, send) {
   let connectTimer = setTimeout(function tick() {
     connectTimer = setTimeout(tick, CONNECTION_PERIOD);
     const targetIdx = getRandomInt(offline.length);
     if (!offline[targetIdx]) {
       return;
     }
+
     send(JSON.stringify({
       connect: offline[targetIdx],
     }));
+
     online.push(offline[targetIdx]);
     offline.splice(targetIdx, 1);
   }, CONNECTION_PERIOD);
+}
+
+function setDisconnectPlayerInterval(online, offline, send) {
+  let disconnectTimer = setTimeout(function tick() {
+    disconnectTimer = setTimeout(tick, DISCONNECTION_PERIOD);
+    const targetIdx = getRandomInt(online.length);
+    if (!online[targetIdx]) {
+      return;
+    }
+
+    send(JSON.stringify({
+      disconnect: online[targetIdx],
+    }));
+
+    offline.push(online[targetIdx]);
+    online.splice(targetIdx, 1);
+  }, DISCONNECTION_PERIOD);
+}
+
+function setSendingData(send) {
+  const offline = ImportedList.list.map((player) => player.id);
+  const online = [];
+
+  setConnectPlayerInterval(online, offline, send);
+
   setTimeout(() => {
-    let disconnectTimer = setTimeout(function tick() {
-      disconnectTimer = setTimeout(tick, DISCONNECTION_PERIOD);
-      const targetIdx = getRandomInt(online.length);
-      if (!online[targetIdx]) {
-        return;
-      }
-      send(JSON.stringify({
-        disconnect: online[targetIdx],
-      }));
-      offline.push(online[targetIdx]);
-      online.splice(targetIdx, 1);
-    }, DISCONNECTION_PERIOD);
+    setDisconnectPlayerInterval(online, offline, send);
   }, DELAY_BEFORE_START_DISCONNECTIONS);
-};
-const _wf = wf;
-export { _wf as wf };
-const wff = function (message, send) {
+}
+exports.setSendingData = setSendingData;
+
+function receiveDataHandler(message, send) {
   let id;
   try {
     id = JSON.parse(message).info;
@@ -48,7 +62,6 @@ const wff = function (message, send) {
   if (!id) {
     return;
   }
-  send(JSON.stringify(list.find((player) => player.id === id)));
-};
-const _wff = wff;
-export { _wff as wff };
+  send(JSON.stringify(ImportedList.list.find((player) => player.id === id)));
+}
+exports.receiveDataHandler = receiveDataHandler;

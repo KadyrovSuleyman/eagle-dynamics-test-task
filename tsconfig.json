@@ -35,10 +35,8 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "server/**/*.ts",
   ],
   "exclude": [
     "node_modules",
-    "typings"
   ],
 }
