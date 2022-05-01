@@ -90,7 +90,7 @@ it('detect empty description', async () => {
   await wrapper.vm.$nextTick();
   expect(wrapper.find('.playerInfo-description').exists()).toBeFalsy();
   expect(wrapper.find('.playerInfo-emptyDescription').text())
-    .toBe('There is no description for this player');
+    .toBe('У этого игрока нет описания');
 });
 
 it('watchs outer store', async () => {

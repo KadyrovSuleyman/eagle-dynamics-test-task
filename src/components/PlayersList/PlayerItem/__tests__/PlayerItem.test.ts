@@ -31,29 +31,29 @@ it('watchs props change', async () => {
   await wrapper.setProps(data);
   expect(wrapper.find('img').attributes('src')).toBe(data.avatar);
   expect(wrapper.find('.playerItem-name').text()).toBe(data.name);
-  expect(wrapper.find('.playerItem-status').text()).toBe(data.status);
+  expect(wrapper.find('.playerItem-status').text()).toBe('Вышел');
 
   await wrapper.setProps(newData);
   expect(wrapper.find('img').attributes('src')).toBe(newData.avatar);
   expect(wrapper.find('.playerItem-name').text()).toBe(newData.name);
-  expect(wrapper.find('.playerItem-status').text()).toBe(newData.status);
+  expect(wrapper.find('.playerItem-status').text()).toBe('Подключен');
 });
 
 it('reflect status to classes', async () => {
-  expect(wrapper.find('.playerItem-status').text()).toBe('');
+  expect(wrapper.find('.playerItem-status').text()).toBe('Вышел');
   expect(wrapper.find('.playersList-playerItem').classes()).toEqual([
     'playersList-playerItem',
   ]);
 
   await wrapper.setProps(data);
-  expect(wrapper.find('.playerItem-status').text()).toBe(data.status);
+  expect(wrapper.find('.playerItem-status').text()).toBe('Вышел');
   expect(wrapper.find('.playersList-playerItem').classes()).toEqual([
     'playersList-playerItem',
     `playersList-playerItem__status_${data.status}`,
   ]);
 
   await wrapper.setProps(newData);
-  expect(wrapper.find('.playerItem-status').text()).toBe(newData.status);
+  expect(wrapper.find('.playerItem-status').text()).toBe('Подключен');
   expect(wrapper.find('.playersList-playerItem').classes()).toEqual([
     'playersList-playerItem',
     `playersList-playerItem__status_${newData.status}`,

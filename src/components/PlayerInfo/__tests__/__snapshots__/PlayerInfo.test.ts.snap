@@ -7,12 +7,12 @@ exports[`renders 1`] = `
     name
   </div>
   <div class="playerInfo-status playerInfo-status__offline">
-    offline
+    Вышел
   </div>
   <div class="playerInfo-description">
     description
   </div> <button class="playerInfo-kickButton">
-    Exclude
+    Исключить
   </button>
 </div>
 `;
@@ -24,12 +24,12 @@ exports[`watchs props change 1`] = `
     name
   </div>
   <div class="playerInfo-status playerInfo-status__offline">
-    offline
+    Вышел
   </div>
   <div class="playerInfo-description">
     description
   </div> <button class="playerInfo-kickButton">
-    Exclude
+    Исключить
   </button>
 </div>
 `;
@@ -41,12 +41,12 @@ exports[`watchs props change 2`] = `
     new name
   </div>
   <div class="playerInfo-status playerInfo-status__online">
-    online
+    Подключен
   </div>
   <div class="playerInfo-description">
     new description
   </div> <button class="playerInfo-kickButton">
-    Exclude
+    Исключить
   </button>
 </div>
 `;

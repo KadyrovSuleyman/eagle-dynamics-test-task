@@ -2,10 +2,10 @@
 
 exports[`renders 1`] = `
 <div class="app-topPanel"><span class="topPanel-header">
-    Welcome to the Players List!
+    Список игроков
   </span>
   <div class="topPanel-counter"><span class="counter-text">
-      Online:
+      Подключено:
     </span> <span class="counter-online">
       10
     </span> <span class="counter-separator">
@@ -13,7 +13,7 @@ exports[`renders 1`] = `
     </span> <span class="counter-total">
       100
     </span> <span class="counter-explanation">
-      players
+      игроков
     </span></div>
 </div>
 `;

@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders empty list 1`] = `
-<div class="app-playersListFallback">
-  There are no players yet
-</div>
-`;
+exports[`renders empty list 1`] = `<div class="app-playersList"></div>`;
 
 exports[`renders filled list 1`] = `
 <div class="app-playersList">
@@ -14,7 +10,7 @@ exports[`renders filled list 1`] = `
       🛦 Flying ℃omradE 🛦
     </div>
     <div class="playerItem-status">
-      offline
+      Вышел
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -23,7 +19,7 @@ exports[`renders filled list 1`] = `
       𝕯esperate 𝕭ℓⱭⅆe 𝕽unner
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -32,7 +28,7 @@ exports[`renders filled list 1`] = `
       Fluffy
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -41,7 +37,7 @@ exports[`renders filled list 1`] = `
       Appel82
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -50,7 +46,7 @@ exports[`renders filled list 1`] = `
       No. 428
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -59,7 +55,7 @@ exports[`renders filled list 1`] = `
       "Matic"
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -68,7 +64,7 @@ exports[`renders filled list 1`] = `
       “Maverick”
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -77,7 +73,7 @@ exports[`renders filled list 1`] = `
       braveheart
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -86,7 +82,7 @@ exports[`renders filled list 1`] = `
       -=~0verthehor!zon~=-
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -95,7 +91,7 @@ exports[`renders filled list 1`] = `
       Justdoit
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
 </div>
@@ -109,7 +105,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       name
     </div>
     <div class="playerItem-status">
-      status
+      Вышел
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -118,7 +114,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       𝕯esperate 𝕭ℓⱭⅆe 𝕽unner
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -127,7 +123,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       Fluffy
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -136,7 +132,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       Appel82
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -145,7 +141,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       No. 428
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -154,7 +150,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       "Matic"
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -163,7 +159,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       “Maverick”
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -172,7 +168,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       braveheart
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -181,7 +177,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       -=~0verthehor!zon~=-
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -190,7 +186,7 @@ exports[`watchs outer store modify players list itself 1`] = `
       Justdoit
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
 </div>
@@ -204,7 +200,7 @@ exports[`watchs outer store modify players list itself 2`] = `
       name
     </div>
     <div class="playerItem-status">
-      status
+      Вышел
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -213,7 +209,7 @@ exports[`watchs outer store modify players list itself 2`] = `
       𝕯esperate 𝕭ℓⱭⅆe 𝕽unner
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -222,7 +218,7 @@ exports[`watchs outer store modify players list itself 2`] = `
       Fluffy
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -231,7 +227,7 @@ exports[`watchs outer store modify players list itself 2`] = `
       Appel82
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -240,7 +236,7 @@ exports[`watchs outer store modify players list itself 2`] = `
       No. 428
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -249,7 +245,7 @@ exports[`watchs outer store modify players list itself 2`] = `
       "Matic"
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -258,7 +254,7 @@ exports[`watchs outer store modify players list itself 2`] = `
       “Maverick”
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -267,7 +263,7 @@ exports[`watchs outer store modify players list itself 2`] = `
       braveheart
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
@@ -276,7 +272,7 @@ exports[`watchs outer store modify players list itself 2`] = `
       -=~0verthehor!zon~=-
     </div>
     <div class="playerItem-status">
-      online
+      Подключен
     </div>
   </div>
 </div>
@@ -289,7 +285,7 @@ exports[`watchs outer store modify some players data 1`] = `
     🛦 Flying ℃omradE 🛦
   </div>
   <div class="playerItem-status">
-    offline
+    Вышел
   </div>
 </div>
 `;
@@ -301,7 +297,7 @@ exports[`watchs outer store modify some players data 2`] = `
     name
   </div>
   <div class="playerItem-status">
-    status
+    Вышел
   </div>
 </div>
 `;

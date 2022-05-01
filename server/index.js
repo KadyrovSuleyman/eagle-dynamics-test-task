@@ -9,8 +9,6 @@ const onConnect = (ws) => {
     receiveDataHandler(message, ws.send.bind(ws));
   });
 
-  console.log('open');
-
   setSendingData(ws.send.bind(ws));
 };
 
@@ -30,6 +28,10 @@ const accept = (req, res) => {
 
 if (!module.require.main) {
   http.createServer(accept).listen(3000);
+  console.log(`
+Socket Server started
+ws://localhost:3000
+  `);
 } else {
   exports.accept = accept;
 }
