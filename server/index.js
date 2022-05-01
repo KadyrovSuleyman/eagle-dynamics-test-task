@@ -1,16 +1,15 @@
 const http = require('http');
 const ws = require('ws');
+const { wf, wff } = require('./logic');
 
 const wss = new ws.Server({ noServer: true });
 
 const accept = (req, res) => {
-  // все входящие запросы должны использовать websockets
   if (!req.headers.upgrade || req.headers.upgrade.toLowerCase() !== 'websocket') {
     res.end();
     return;
   }
 
-  // может быть заголовок Connection: keep-alive, Upgrade
   if (!req.headers.connection.match(/\bupgrade\b/i)) {
     res.end();
     return;
@@ -21,18 +20,18 @@ const accept = (req, res) => {
 
 const onConnect = (ws) => {
   ws.on('message', (message) => {
-    // ws.send(`answer: ${message}`);
-
-    // setTimeout(() => ws.send('zxvz'), 10000);
     console.log(`received: ${message}`);
+    wff(message, ws.send.bind(ws));
   });
 
   console.log('open');
 
-  let timerId = setTimeout(function tick() {
-    ws.send('zxcvz');
-    timerId = setTimeout(tick, 3000);
-  }, 3000);
+  // let timerId = setTimeout(function tick() {
+  //   ws.send('zxcvz');
+  //   timerId = setTimeout(tick, 3000);
+  // }, 3000);
+
+  wf(ws.send.bind(ws));
 };
 
 if (!module.require.main) {

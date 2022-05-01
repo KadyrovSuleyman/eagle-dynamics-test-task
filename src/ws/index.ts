@@ -1,3 +1,5 @@
+import store from '@/store';
+
 const socket = new WebSocket('ws://localhost:3000');
 
 socket.onopen = (e) => {
@@ -5,7 +7,26 @@ socket.onopen = (e) => {
 };
 
 socket.onmessage = (event) => {
-  console.log(`[message] Данные получены с сервера: ${event.data}`);
+  // console.log(`[message] Данные получены с сервера: ${event.data}`);
+  let data: { [message: string]: string };
+  try {
+    data = JSON.parse(event.data);
+    if (!data) {
+      return;
+    }
+    if (data.connect) {
+      store.dispatch('playerConnected', data.connect);
+    }
+    if (data.disconnect) {
+      store.dispatch('playerDisconnected', data.disconnect);
+    }
+    if (data.id) {
+      store.commit('toAddPlayer', data);
+      store.commit('toConnectPlayer', data);
+    }
+  } catch (err) {
+    console.warn(`json parse error: ${err}`);
+  }
 };
 
 socket.onclose = (event) => {

@@ -1,4 +1,4 @@
-interface Player {
+export interface Player {
   id: string,
   status: string,
   name: string,
@@ -6,7 +6,7 @@ interface Player {
   description?: string,
 }
 
-const list: Player[] = [
+export const list: Player[] = [
   {
     name: '🛦 Flying ℃omradE 🛦',
     id: 'we0m',
@@ -76,5 +76,3 @@ const list: Player[] = [
     status: 'online',
   },
 ];
-
-export default list;
