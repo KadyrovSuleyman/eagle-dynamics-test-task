@@ -15,10 +15,6 @@ let store: Store<{ list: Player[] }>;
 beforeEach(() => {
   store = new Vuex.Store({
     state: {
-      // list: mockedList.map((item) => ({
-      //   ...item,
-      //   selected: false,
-      // })),
       list: mockedList,
     },
     mutations: {
