@@ -1,5 +1,9 @@
 import { list } from './list';
 
+const CONNECTION_PERIOD = 2100;
+const DISCONNECTION_PERIOD = 3500;
+const DELAY_BEFORE_START_DISCONNECTIONS = 4000;
+
 const getRandomInt = (max: number) => Math.floor(Math.random() * max);
 
 export const wf = (send: CallableFunction) => {
@@ -7,46 +11,37 @@ export const wf = (send: CallableFunction) => {
   const online = [] as string[];
 
   let connectTimer = setTimeout(function tick() {
-    connectTimer = setTimeout(tick, 2000);
+    connectTimer = setTimeout(tick, CONNECTION_PERIOD);
 
     const targetIdx = getRandomInt(offline.length);
     if (!offline[targetIdx]) {
       return;
     }
-
-    // console.log(JSON.stringify({
-    //   connect: offline[targetIdx],
-    // }));
-
     send(JSON.stringify({
       connect: offline[targetIdx],
     }));
 
     online.push(offline[targetIdx]);
     offline.splice(targetIdx, 1);
+  }, CONNECTION_PERIOD);
 
-    // console.log(online);
-    // console.log(offline);
-  }, 2000);
+  setTimeout(() => {
+    let disconnectTimer = setTimeout(function tick() {
+      disconnectTimer = setTimeout(tick, DISCONNECTION_PERIOD);
 
-  let disconnectTimer = setTimeout(function tick() {
-    disconnectTimer = setTimeout(tick, 3000);
+      const targetIdx = getRandomInt(online.length);
+      if (!online[targetIdx]) {
+        return;
+      }
 
-    const targetIdx = getRandomInt(online.length);
-    if (!online[targetIdx]) {
-      return;
-    }
+      send(JSON.stringify({
+        disconnect: online[targetIdx],
+      }));
 
-    send(JSON.stringify({
-      disconnect: online[targetIdx],
-    }));
-
-    offline.push(online[targetIdx]);
-    online.splice(targetIdx, 1);
-
-    // console.log(offline);
-    // console.log(online);
-  }, 3000);
+      offline.push(online[targetIdx]);
+      online.splice(targetIdx, 1);
+    }, DISCONNECTION_PERIOD);
+  }, DELAY_BEFORE_START_DISCONNECTIONS);
 };
 
 export const wff = (message: string, send: CallableFunction) => {

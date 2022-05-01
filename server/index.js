@@ -20,16 +20,10 @@ const accept = (req, res) => {
 
 const onConnect = (ws) => {
   ws.on('message', (message) => {
-    console.log(`received: ${message}`);
     wff(message, ws.send.bind(ws));
   });
 
   console.log('open');
-
-  // let timerId = setTimeout(function tick() {
-  //   ws.send('zxcvz');
-  //   timerId = setTimeout(tick, 3000);
-  // }, 3000);
 
   wf(ws.send.bind(ws));
 };

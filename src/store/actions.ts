@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+import Socket from '@/ws';
 import { ActionContext, ActionTree } from 'vuex';
 import socket from '@/ws';
 import { StateT } from './state';
@@ -12,6 +13,10 @@ const actions: ActionTree<StateT, any> = {
     socket.send(JSON.stringify({
       info: id,
     }));
+
+    // Socket(store).send(JSON.stringify({
+    //   info: id,
+    // }));
   },
 
   toBanPlayer: (store: ActionContext<StateT, any>, id: string) => {
