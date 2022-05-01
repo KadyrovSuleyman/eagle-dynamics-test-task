@@ -9,9 +9,7 @@ exports[`renders empty list 1`] = `
 exports[`renders filled list 1`] = `
 <div class="app-playersList">
   <div class="playersList-playerItem playersList-playerItem__status_offline">
-    <div class="playerItem-avatar">
-      dev/profiles/face1.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face1.jpg" alt="🛦 Flying ℃omradE 🛦" class="playerItem-img"></div>
     <div class="playerItem-name">
       🛦 Flying ℃omradE 🛦
     </div>
@@ -20,9 +18,7 @@ exports[`renders filled list 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face2.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face2.jpg" alt="𝕯esperate 𝕭ℓⱭⅆe 𝕽unner" class="playerItem-img"></div>
     <div class="playerItem-name">
       𝕯esperate 𝕭ℓⱭⅆe 𝕽unner
     </div>
@@ -31,9 +27,7 @@ exports[`renders filled list 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face3.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face3.jpg" alt="Fluffy" class="playerItem-img"></div>
     <div class="playerItem-name">
       Fluffy
     </div>
@@ -42,9 +36,7 @@ exports[`renders filled list 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face4.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face4.jpg" alt="Appel82" class="playerItem-img"></div>
     <div class="playerItem-name">
       Appel82
     </div>
@@ -53,9 +45,7 @@ exports[`renders filled list 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face2.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face2.jpg" alt="No. 428" class="playerItem-img"></div>
     <div class="playerItem-name">
       No. 428
     </div>
@@ -64,9 +54,7 @@ exports[`renders filled list 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face1.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face1.jpg" alt="&quot;Matic&quot;" class="playerItem-img"></div>
     <div class="playerItem-name">
       "Matic"
     </div>
@@ -75,9 +63,7 @@ exports[`renders filled list 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face4.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face4.jpg" alt="“Maverick”" class="playerItem-img"></div>
     <div class="playerItem-name">
       “Maverick”
     </div>
@@ -86,9 +72,7 @@ exports[`renders filled list 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face4.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face4.jpg" alt="braveheart" class="playerItem-img"></div>
     <div class="playerItem-name">
       braveheart
     </div>
@@ -97,9 +81,7 @@ exports[`renders filled list 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face1.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face1.jpg" alt="-=~0verthehor!zon~=-" class="playerItem-img"></div>
     <div class="playerItem-name">
       -=~0verthehor!zon~=-
     </div>
@@ -108,9 +90,7 @@ exports[`renders filled list 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face3.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face3.jpg" alt="Justdoit" class="playerItem-img"></div>
     <div class="playerItem-name">
       Justdoit
     </div>
@@ -124,9 +104,7 @@ exports[`renders filled list 1`] = `
 exports[`watchs outer store modify players list itself 1`] = `
 <div class="app-playersList">
   <div class="playersList-playerItem playersList-playerItem__status_status">
-    <div class="playerItem-avatar">
-      avatar
-    </div>
+    <div class="playerItem-avatar"><img src="avatar" alt="name" class="playerItem-img"></div>
     <div class="playerItem-name">
       name
     </div>
@@ -135,9 +113,7 @@ exports[`watchs outer store modify players list itself 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face2.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face2.jpg" alt="𝕯esperate 𝕭ℓⱭⅆe 𝕽unner" class="playerItem-img"></div>
     <div class="playerItem-name">
       𝕯esperate 𝕭ℓⱭⅆe 𝕽unner
     </div>
@@ -146,9 +122,7 @@ exports[`watchs outer store modify players list itself 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face3.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face3.jpg" alt="Fluffy" class="playerItem-img"></div>
     <div class="playerItem-name">
       Fluffy
     </div>
@@ -157,9 +131,7 @@ exports[`watchs outer store modify players list itself 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face4.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face4.jpg" alt="Appel82" class="playerItem-img"></div>
     <div class="playerItem-name">
       Appel82
     </div>
@@ -168,9 +140,7 @@ exports[`watchs outer store modify players list itself 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face2.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face2.jpg" alt="No. 428" class="playerItem-img"></div>
     <div class="playerItem-name">
       No. 428
     </div>
@@ -179,9 +149,7 @@ exports[`watchs outer store modify players list itself 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face1.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face1.jpg" alt="&quot;Matic&quot;" class="playerItem-img"></div>
     <div class="playerItem-name">
       "Matic"
     </div>
@@ -190,9 +158,7 @@ exports[`watchs outer store modify players list itself 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face4.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face4.jpg" alt="“Maverick”" class="playerItem-img"></div>
     <div class="playerItem-name">
       “Maverick”
     </div>
@@ -201,9 +167,7 @@ exports[`watchs outer store modify players list itself 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face4.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face4.jpg" alt="braveheart" class="playerItem-img"></div>
     <div class="playerItem-name">
       braveheart
     </div>
@@ -212,9 +176,7 @@ exports[`watchs outer store modify players list itself 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face1.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face1.jpg" alt="-=~0verthehor!zon~=-" class="playerItem-img"></div>
     <div class="playerItem-name">
       -=~0verthehor!zon~=-
     </div>
@@ -223,9 +185,7 @@ exports[`watchs outer store modify players list itself 1`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face3.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face3.jpg" alt="Justdoit" class="playerItem-img"></div>
     <div class="playerItem-name">
       Justdoit
     </div>
@@ -239,9 +199,7 @@ exports[`watchs outer store modify players list itself 1`] = `
 exports[`watchs outer store modify players list itself 2`] = `
 <div class="app-playersList">
   <div class="playersList-playerItem playersList-playerItem__status_status">
-    <div class="playerItem-avatar">
-      avatar
-    </div>
+    <div class="playerItem-avatar"><img src="avatar" alt="name" class="playerItem-img"></div>
     <div class="playerItem-name">
       name
     </div>
@@ -250,9 +208,7 @@ exports[`watchs outer store modify players list itself 2`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face2.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face2.jpg" alt="𝕯esperate 𝕭ℓⱭⅆe 𝕽unner" class="playerItem-img"></div>
     <div class="playerItem-name">
       𝕯esperate 𝕭ℓⱭⅆe 𝕽unner
     </div>
@@ -261,9 +217,7 @@ exports[`watchs outer store modify players list itself 2`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face3.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face3.jpg" alt="Fluffy" class="playerItem-img"></div>
     <div class="playerItem-name">
       Fluffy
     </div>
@@ -272,9 +226,7 @@ exports[`watchs outer store modify players list itself 2`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face4.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face4.jpg" alt="Appel82" class="playerItem-img"></div>
     <div class="playerItem-name">
       Appel82
     </div>
@@ -283,9 +235,7 @@ exports[`watchs outer store modify players list itself 2`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face2.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face2.jpg" alt="No. 428" class="playerItem-img"></div>
     <div class="playerItem-name">
       No. 428
     </div>
@@ -294,9 +244,7 @@ exports[`watchs outer store modify players list itself 2`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face1.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face1.jpg" alt="&quot;Matic&quot;" class="playerItem-img"></div>
     <div class="playerItem-name">
       "Matic"
     </div>
@@ -305,9 +253,7 @@ exports[`watchs outer store modify players list itself 2`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face4.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face4.jpg" alt="“Maverick”" class="playerItem-img"></div>
     <div class="playerItem-name">
       “Maverick”
     </div>
@@ -316,9 +262,7 @@ exports[`watchs outer store modify players list itself 2`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face4.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face4.jpg" alt="braveheart" class="playerItem-img"></div>
     <div class="playerItem-name">
       braveheart
     </div>
@@ -327,9 +271,7 @@ exports[`watchs outer store modify players list itself 2`] = `
     </div>
   </div>
   <div class="playersList-playerItem playersList-playerItem__status_online">
-    <div class="playerItem-avatar">
-      dev/profiles/face1.jpg
-    </div>
+    <div class="playerItem-avatar"><img src="dev/profiles/face1.jpg" alt="-=~0verthehor!zon~=-" class="playerItem-img"></div>
     <div class="playerItem-name">
       -=~0verthehor!zon~=-
     </div>
@@ -342,9 +284,7 @@ exports[`watchs outer store modify players list itself 2`] = `
 
 exports[`watchs outer store modify some players data 1`] = `
 <div class="playersList-playerItem playersList-playerItem__status_offline">
-  <div class="playerItem-avatar">
-    dev/profiles/face1.jpg
-  </div>
+  <div class="playerItem-avatar"><img src="dev/profiles/face1.jpg" alt="🛦 Flying ℃omradE 🛦" class="playerItem-img"></div>
   <div class="playerItem-name">
     🛦 Flying ℃omradE 🛦
   </div>
@@ -356,9 +296,7 @@ exports[`watchs outer store modify some players data 1`] = `
 
 exports[`watchs outer store modify some players data 2`] = `
 <div class="playersList-playerItem playersList-playerItem__status_status">
-  <div class="playerItem-avatar">
-    avatar
-  </div>
+  <div class="playerItem-avatar"><img src="avatar" alt="name" class="playerItem-img"></div>
   <div class="playerItem-name">
     name
   </div>

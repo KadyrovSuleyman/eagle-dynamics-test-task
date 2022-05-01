@@ -29,12 +29,12 @@ it('renders', async () => {
 
 it('watchs props change', async () => {
   await wrapper.setProps(data);
-  expect(wrapper.find('.playerItem-avatar').text()).toBe(data.avatar);
+  expect(wrapper.find('img').attributes('src')).toBe(data.avatar);
   expect(wrapper.find('.playerItem-name').text()).toBe(data.name);
   expect(wrapper.find('.playerItem-status').text()).toBe(data.status);
 
   await wrapper.setProps(newData);
-  expect(wrapper.find('.playerItem-avatar').text()).toBe(newData.avatar);
+  expect(wrapper.find('img').attributes('src')).toBe(newData.avatar);
   expect(wrapper.find('.playerItem-name').text()).toBe(newData.name);
   expect(wrapper.find('.playerItem-status').text()).toBe(newData.status);
 });

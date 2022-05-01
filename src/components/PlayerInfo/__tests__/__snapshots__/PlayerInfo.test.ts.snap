@@ -2,13 +2,11 @@
 
 exports[`renders 1`] = `
 <div class="app-playerInfo" id="we0m" avatar="avatar" name="name" status="offline" description="description">
-  <div class="playerInfo-avatar">
-    avatar
-  </div>
+  <div class="playerInfo-avatar"><img src="avatar" alt="name" class="playerInfo-img"></div>
   <div class="playerInfo-name">
     name
   </div>
-  <div class="playerInfo-status">
+  <div class="playerInfo-status playerInfo-status__offline">
     offline
   </div>
   <div class="playerInfo-description">
@@ -21,13 +19,11 @@ exports[`renders 1`] = `
 
 exports[`watchs props change 1`] = `
 <div class="app-playerInfo">
-  <div class="playerInfo-avatar">
-    avatar
-  </div>
+  <div class="playerInfo-avatar"><img src="avatar" alt="name" class="playerInfo-img"></div>
   <div class="playerInfo-name">
     name
   </div>
-  <div class="playerInfo-status">
+  <div class="playerInfo-status playerInfo-status__offline">
     offline
   </div>
   <div class="playerInfo-description">
@@ -40,13 +36,11 @@ exports[`watchs props change 1`] = `
 
 exports[`watchs props change 2`] = `
 <div class="app-playerInfo">
-  <div class="playerInfo-avatar">
-    new avatar
-  </div>
+  <div class="playerInfo-avatar"><img src="new avatar" alt="new name" class="playerInfo-img"></div>
   <div class="playerInfo-name">
     new name
   </div>
-  <div class="playerInfo-status">
+  <div class="playerInfo-status playerInfo-status__online">
     online
   </div>
   <div class="playerInfo-description">

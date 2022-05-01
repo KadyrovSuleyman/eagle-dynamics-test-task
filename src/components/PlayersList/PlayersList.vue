@@ -15,10 +15,6 @@ export default Vue.extend({
   methods: {
     ...handlers,
   },
-  // data() {
-  //   console.log(state.selected);
-  //   return {}
-  // }
 });
 </script>
 
