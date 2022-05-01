@@ -1,5 +1,12 @@
-export const __esModule = true;
-export const list = [
+export interface Player {
+  id: string,
+  status: string,
+  name: string,
+  avatar: string,
+  description?: string,
+}
+
+export const list: Player[] = [
   {
     name: '🛦 Flying ℃omradE 🛦',
     id: 'we0m',
