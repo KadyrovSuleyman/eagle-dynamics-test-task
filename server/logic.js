@@ -1,8 +1,8 @@
 const ImportedList = require('./list');
 
-const CONNECTION_PERIOD = 2100;
-const DISCONNECTION_PERIOD = 3500;
-const DELAY_BEFORE_START_DISCONNECTIONS = 4000;
+const CONNECTION_PERIOD = 2000;
+const DISCONNECTION_PERIOD = 2000;
+const DELAY_BEFORE_START_DISCONNECTIONS = 11000;
 
 function getRandomInt(max) { return Math.floor(Math.random() * max); }
 

@@ -20,7 +20,7 @@ const actions: ActionTree<StateT, any> = {
 
   playerConnected: async (store: ActionContext<StateT, any>, id: string) => {
     if (store.state.blackList.includes(id)) {
-      console.warn('you are banned!', id);
+      console.warn('Попытка подключения забаненного игрока:', id);
       return;
     }
 
