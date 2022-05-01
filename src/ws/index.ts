@@ -77,7 +77,8 @@ socket.onmessage = (event) => {
     }
     if (data.id) {
       store.commit('toAddPlayer', data);
-      store.commit('toConnectPlayer', data);
+      // store.commit('toConnectPlayer', data);
+      store.dispatch('playerConnected', data.id);
     }
   } catch (err) {
     console.warn(`json parse error: ${err}`);

@@ -1,33 +1,50 @@
 .app-playerInfo {
   display: grid;
 
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: min-content auto auto auto;
+  row-gap: 10px;
 
   align-content: center;
   align-self: flex-start;
 }
 
 .playerInfo-avatar {
-  grid-row: 1 / 3;
+  grid-row: 1 / 5;
   grid-column: 1 / 2;
 }
 
 .playerInfo-name {
   grid-row: 1 / 2;
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
 }
 
 .playerInfo-status {
   grid-row: 2 / 3;
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
 }
 
-.playerInfo-description {
-  grid-row: 3 / 4;
-  grid-column: 1 / 3;
+.playerInfo-description,
+.playerInfo-emptyDescription
+{
+  grid-row: 5 / 6;
+  grid-column: 1 / 5;
 }
 
 .playerInfo-kickButton {
-  grid-column: 4 / 5;
-  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+
+  width: 100px;
+}
+
+.playerInfo-img {
+  width: 200px;
+  height: 200px;
+}
+
+.playerInfo-name,
+.playerInfo-status,
+.playerInfo-kickButton
+{
+  margin-left: 20px;
 }

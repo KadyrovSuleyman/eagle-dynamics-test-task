@@ -13,6 +13,7 @@ export default Vue.extend({
       type: Function,
       default: () => ({}),
     },
+    selected: Boolean,
   },
 });
 </script>
@@ -22,11 +23,12 @@ export default Vue.extend({
     :class="[
       'playersList-playerItem',
       `${status ? `playersList-playerItem__status_${status}` : ''}`,
+      `${selected ? 'playersList-playerItem__selected' : ''}`,
     ]"
     @click="onclick"
   >
     <div class="playerItem-avatar">
-      {{ avatar }}
+      <img class="playerItem-img" :src="avatar" :alt="name"/>
     </div>
     <div class="playerItem-name">
       {{ name }}

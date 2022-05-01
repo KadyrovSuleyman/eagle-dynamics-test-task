@@ -1,4 +1,10 @@
 .app-playersList {
   display: grid;
   row-gap: 10px;
+
+  overflow: auto;
+  max-height: calc(100vh - 50px - 20px);
+  direction: rtl;
+
+  overflow-x: hidden;
 }

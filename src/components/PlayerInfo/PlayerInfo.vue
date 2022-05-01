@@ -21,12 +21,15 @@ export default Vue.extend({
 
   <div v-else class="app-playerInfo">
     <div class="playerInfo-avatar">
-      {{ player.avatar }}
+      <img class="playerInfo-img" :src="player.avatar" :alt="player.name">
     </div>
     <div class="playerInfo-name">
       {{ player.name }}
     </div>
-    <div class="playerInfo-status">
+    <div :class="[
+    'playerInfo-status',
+    `playerInfo-status__${player.status}`,
+    ]">
       {{ player.status }}
     </div>
     <div v-if="player.description" class="playerInfo-description">

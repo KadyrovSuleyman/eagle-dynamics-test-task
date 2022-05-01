@@ -1,0 +1,27 @@
+.app-topPanel {
+  display: grid;
+
+  height: 50px;
+  padding-left: 40px;
+}
+
+.topPanel-counter {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+}
+
+.counter-online {
+  text-align: end;
+}
+
+.counter-separator {
+  padding: 0 5px;
+}
+
+.counter-online,
+.counter-total
+{
+  min-width: 30px;
+  // width: 30px;
+}

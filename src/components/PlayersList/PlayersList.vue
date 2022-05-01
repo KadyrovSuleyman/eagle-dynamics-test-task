@@ -15,6 +15,10 @@ export default Vue.extend({
   methods: {
     ...handlers,
   },
+  // data() {
+  //   console.log(state.selected);
+  //   return {}
+  // }
 });
 </script>
 
@@ -31,6 +35,7 @@ export default Vue.extend({
       :name="player.name"
       :status="player.status"
       :onclick="() => { select(player.id); }"
+      :selected="selected ? selected.id === player.id : false"
     />
 
   </div>

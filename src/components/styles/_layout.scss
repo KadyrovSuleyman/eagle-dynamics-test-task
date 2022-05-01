@@ -1,7 +1,9 @@
 #app {
   display: grid;
+  align-items: start;
 
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto min-content auto;
 
   row-gap: 20px;
   column-gap: 20px;
@@ -13,11 +15,11 @@
 }
 
 .app-playersList {
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
   grid-column: 1 / 2;
 }
 
 .app-playerInfo {
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
   grid-column: 2 / 3;
 }
