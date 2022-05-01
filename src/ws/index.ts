@@ -7,7 +7,6 @@ socket.onopen = (e) => {
 };
 
 socket.onmessage = (event) => {
-  // console.log(`[message] Данные получены с сервера: ${event.data}`);
   let data: { [message: string]: string };
   try {
     data = JSON.parse(event.data);
