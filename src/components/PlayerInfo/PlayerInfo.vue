@@ -16,7 +16,7 @@ export default Vue.extend({
 
 <template>
   <div v-if="!isPlayerSelected" class="app-playerInfoFallback">
-    Select the player
+    Выберите игрока
   </div>
 
   <div v-else class="app-playerInfo">
@@ -30,19 +30,22 @@ export default Vue.extend({
     'playerInfo-status',
     `playerInfo-status__${player.status}`,
     ]">
-      {{ player.status }}
+      {{ player.status === 'online'
+          ? 'Подключен'
+          : 'Вышел'
+       }}
     </div>
     <div v-if="player.description" class="playerInfo-description">
       {{ player.description }}
     </div>
     <div v-else class="playerInfo-emptyDescription">
-      There is no description for this player
+      У этого игрока нет описания
     </div>
     <button
       @click="() => ban(player.id)"
       class="playerInfo-kickButton"
     >
-      Exclude
+      Исключить
     </button>
   </div>
 </template>

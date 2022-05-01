@@ -19,11 +19,7 @@ export default Vue.extend({
 </script>
 
 <template>
-  <div v-if="!list.length" class="app-playersListFallback">
-    There are no players yet
-  </div>
-
-  <div v-else class="app-playersList">
+  <div class="app-playersList">
     <player-item
       v-for="player of list"
       :key="player.id"

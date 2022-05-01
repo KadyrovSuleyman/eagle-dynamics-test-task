@@ -17,16 +17,16 @@ export default Vue.extend({
 <template>
   <div class="app-topPanel">
     <span class="topPanel-header">
-      Welcome to the Players List!
+      Список игроков
     </span>
 
     <div v-if="!total" class="topPanel-counterFallback">
-      There is no registrated players
+      Нет зарегестрированных игроков
     </div>
 
     <div v-else class="topPanel-counter">
       <span class="counter-text">
-        Online:
+        Подключено:
       </span>
       <span class="counter-online">
         {{ online }}
@@ -38,7 +38,7 @@ export default Vue.extend({
         {{ total }}
       </span>
       <span class="counter-explanation">
-        players
+        игроков
       </span>
     </div>
   </div>

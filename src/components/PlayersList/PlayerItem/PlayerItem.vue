@@ -34,7 +34,10 @@ export default Vue.extend({
       {{ name }}
     </div>
     <div class="playerItem-status">
-      {{ status }}
+      {{ status === 'online'
+          ? 'Подключен'
+          : 'Вышел'
+        }}
     </div>
   </div>
 </template>
